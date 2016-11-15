@@ -1,0 +1,10 @@
+# Сборка контейнера
+docker build -t u2668/node-js-sceleton .
+# Запуск
+docker run -p 8080:8080 --name node -d u2668/node-js-sceleton
+# Опубликовать
+docker push u2668/node-js-sceleton
+# Запустить в облаке
+ssh root@46.101.204.43 docker stop back-end
+ssh root@46.101.204.43 docker rm back-end
+ssh root@46.101.204.43 docker run -p 80:8080 -d --name back-end u2668/node-js-sceleton
