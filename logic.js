@@ -1,3 +1,4 @@
+let answer = 0;
 module.exports = {
-    answer: 42
-}
+    answer: () => answer++
+};
