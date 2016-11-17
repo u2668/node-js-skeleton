@@ -1,10 +1,10 @@
 #!/bin/sh
 docker build -t u2668/node-js-sceleton .
-#docker push u2668/node-js-sceleton
+docker push u2668/node-js-sceleton
 
 # local
-docker rm -f back-end
-docker run --name back-end --net go-to-canteen -d u2668/node-js-sceleton
+#docker rm -f back-end
+#docker run --name back-end --net go-to-canteen -d u2668/node-js-sceleton
 
 # remote
 #ssh root@46.101.204.43 docker rm -f back-end
